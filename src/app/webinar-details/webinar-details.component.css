@@ -1,0 +1,126 @@
+.webinar-container {
+  max-width: 1200px;
+}
+.webinar-header {
+  font-weight: 600;
+  font-size: 1.7rem;
+}
+.view-all-btn {
+  border-radius: 8px;
+}
+.webinar-card {
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+  background: #fff;
+  min-height: 410px;
+  display: flex;
+  flex-direction: column;
+}
+.webinar-card-img-box {
+  min-height: 180px;
+  background: #f9f3ec;
+  .webinar-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  .live-label {
+    background: #ffe6e6;
+    color: #ce1e1e;
+    font-weight: 600;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 4px 12px;
+    font-size: 1rem;
+  }
+  .attendees-label {
+    background: #efefefcc;
+    color: #262626;
+    font-size: 1rem;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 4px 10px;
+  }
+  .duration-label {
+    background: #262626;
+    color: #fff;
+    border-radius: 8px;
+    padding: 2px 8px;
+    margin: 10px;
+    font-size: 0.97rem;
+  }
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 1.2rem;
+  .golden-star {
+    color: #ffd700;
+    font-size: 30px;
+  }
+  .credits-label {
+    background: #fff5e0;
+    color: #b7852b;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.97rem;
+    padding: 3px 10px;
+  }
+  .expiry-label {
+    background: #ffe7e7;
+    color: #df3b3b;
+    border-radius: 8px;
+    font-size: 0.97rem;
+    padding: 3px 10px;
+  }
+  .webinar-title {
+    font-size: 1.11rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .org-logo {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+  }
+  .org-name {
+    font-weight: 500;
+    font-size: 0.98rem;
+    color: #555;
+  }
+  .highlight-box {
+    background: #fff2ee;
+    border-radius: 12px;
+    padding: 8px 13px;
+    display: flex;
+    flex-direction: column;
+    .highlight-label {
+      font-weight: 700;
+      color: #c68337;
+      font-size: 0.97rem;
+    }
+    .highlight-text {
+      color: #393e46;
+      font-size: 0.95rem;
+      margin-top: 2px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .webinar-card {
+      .webinar-image {
+        height: 125px;
+      }
+      .notify-cta {
+        flex-direction: column;
+        gap: 8px;
+        .notify-btn {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

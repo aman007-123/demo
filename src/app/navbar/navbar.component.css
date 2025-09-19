@@ -1,0 +1,127 @@
+.docquity-navbar {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-bottom: 1px solid #f1f1f1;
+  min-height: 64px;
+}
+.logo {
+  width: 40px;
+  height: 40px;
+}
+.search-box {
+  background: #f7f7f8;
+  border-radius: 12px;
+  padding: 0 8px 0 14px;
+  height: 48px;
+  .search-input {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    width: 230px;
+    font-size: 1rem;
+  }
+  .search-icon img {
+    width: 22px;
+    height: 22px;
+  }
+}
+.navbar-center {
+  gap: 36px;
+  .nav-icon {
+    text-decoration: none;
+    color: #5c5c5c;
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .nav-label {
+      font-size: 0.95rem;
+      font-weight: 400;
+      margin-top: 3px;
+    }
+    img {
+      width: 26px;
+      height: 26px;
+      margin-bottom: 2px;
+    }
+  }
+  .nav-icon.active {
+    color: #000;
+    .nav-label {
+      font-weight: 600;
+    }
+    .active-underline {
+      width: 80%;
+      height: 2.2px;
+      background: #222;
+      margin-top: 2px;
+      border-radius: 4px;
+    }
+  }
+}
+.post-btn {
+  border-radius: 24px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding: 6px 22px;
+  .plus-icon {
+    font-size: 1.2rem;
+    margin-right: 4px;
+  }
+}
+.profile-box {
+  .profile-img {
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
+  }
+  .verified-icon {
+    width: 15px;
+    height: 15px;
+  }
+  .profile-name {
+    font-size: 1.03rem;
+    font-weight: 500;
+    color: #343434;
+  }
+  .dropdown-caret {
+    font-size: 1.1rem;
+    color: #888;
+  }
+}
+
+.navbar-toggler {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1.25rem;
+}
+
+@media (max-width: 991px) {
+  .docquity-navbar {
+    flex-wrap: nowrap;
+  }
+  .navbar-left {
+    flex: 1 1 auto;
+  }
+  .navbar-collapse {
+    background: #fff;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid #eee;
+    z-index: 1040;
+  }
+  .navbar-center {
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+  .navbar-right {
+    justify-content: flex-start !important;
+    margin-top: 1rem;
+  }
+}

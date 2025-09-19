@@ -1,0 +1,28 @@
+<div class="container top-speakers-container py-3">
+    <div class="d-flex justify-content-between align-items-center mb-2">
+        <h4 class="section-title">Top speakers</h4>
+        <button class="btn btn-outline-dark view-all-btn">View all</button>
+    </div>
+    <div class="d-flex gap-4 flex-wrap justify-content-start">
+        <div class="speaker-card" *ngFor="let s of speakers">
+            <div class="card-img-box position-relative d-flex justify-content-center align-items-center">
+                <img [src]="s.photo" alt="speaker photo" class="speaker-photo rounded-circle" />
+                <span *ngIf="s.live" class="live-badge">
+                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="12" fill="#FF6B6B" />
+                        <circle cx="12" cy="12" r="6" fill="#fff" />
+                        <circle cx="12" cy="12" r="3" fill="#FF6B6B" />
+                    </svg>
+                    <span class="logo-live">(&#x1F4F9;) Live</span>
+                </span>
+            </div>
+            <div class="card-body pt-2">
+                <div class="d-flex align-items-center justify-content-between">
+                    <span class="speaker-name">{{s.name}}</span>
+                    <span class="chevron">&#8250;</span>
+                </div>
+                <div class="speaker-speciality">{{s.speciality}}</div>
+            </div>
+        </div>
+    </div>
+</div>
