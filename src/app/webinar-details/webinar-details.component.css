@@ -90,23 +90,6 @@
     font-size: 0.98rem;
     color: #555;
   }
-  .highlight-box {
-    background: #fff2ee;
-    border-radius: 12px;
-    padding: 8px 13px;
-    display: flex;
-    flex-direction: column;
-    .highlight-label {
-      font-weight: 700;
-      color: #c68337;
-      font-size: 0.97rem;
-    }
-    .highlight-text {
-      color: #393e46;
-      font-size: 0.95rem;
-      margin-top: 2px;
-    }
-  }
 
   @media (max-width: 767px) {
     .webinar-card {

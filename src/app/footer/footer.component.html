@@ -1,0 +1,83 @@
+<div class="container mt-4">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-3">
+            <h5>Webinars you may like</h5>
+            <div class="mb-4">
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="fw-bold">Specialty</span>
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+                <input type="text" class="form-control mt-2 mb-2" placeholder="Search" />
+                <div *ngFor="let specialty of specialties" class="form-check">
+                    <input class="form-check-input" type="checkbox" [id]="specialty" />
+                    <label class="form-check-label" [for]="specialty">
+                        {{ specialty }}
+                    </label>
+                </div>
+            </div>
+            <div class="mb-4">
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="fw-bold">Topics</span>
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+            </div>
+            <div class="mb-4">
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="fw-bold">Speakers</span>
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+            </div>
+            <div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="fw-bold">Pharma & associations</span>
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Webinar Cards -->
+        <div class="col-md-9">
+            <div class="row g-3">
+                <div class="col-md-6" *ngFor="let webinar of webinars">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-2">
+                                <img src="{{ webinar.logo }}" alt="{{ webinar.org }}"
+                                    style="width: 36px; height: 36px; object-fit: contain; margin-right: 8px;" />
+                                <div>
+                                    <div class="fw-bold">{{ webinar.org }}</div>
+                                    <div class="small text-muted">{{ webinar.sponsored }} &middot; {{ webinar.followers
+                                        }} followers &middot; {{ webinar.time }}</div>
+                                </div>
+                                <button class="btn btn-link ms-auto">Follow</button>
+                            </div>
+                            <img [src]="webinar.image" class="img-fluid rounded mb-2" alt="webinar preview" />
+                            <div class="mb-2">
+                                <span class="badge bg-warning text-dark me-1">{{ webinar.credits }} Credits</span>
+                                <span class="text-danger" *ngIf="webinar.expiry">({{ webinar.expiry }})</span>
+                            </div>
+                            <div class="fw-bold mb-1">{{ webinar.title }}</div>
+                            <div class="mb-2">{{ webinar.subtitle }}</div>
+                            <div class="highlight-box mb-3">
+                                <span class="highlight-label">KEY HIGHLIGHTS</span>
+                                <span class="highlight-text">{{ webinar.highlights }}</span>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between mt-2">
+                                <div class="text-muted small">
+                                    {{ webinar.likes }} Likes &nbsp; {{ webinar.comments }} Comments &nbsp; {{
+                                    webinar.views }} Views
+                                </div>
+                                <div>
+                                    <i class="bi bi-hand-thumbs-up"></i>
+                                    <i class="bi bi-chat-left"></i>
+                                    <i class="bi bi-share"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
